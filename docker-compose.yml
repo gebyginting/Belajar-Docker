@@ -4,6 +4,7 @@ services:
   web-server:
     build: server
     container_name: web-server_app
+    dockerfile: Dockerfile
     ports:
       - "3000:3000"
     restart: always
@@ -11,6 +12,7 @@ services:
   web-client:
     build: client
     container_name: web-client_app
+    dockerfile: Dockerfile
     ports:
       - "8080:80"
     restart: always
