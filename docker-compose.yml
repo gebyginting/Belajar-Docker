@@ -3,8 +3,8 @@ services:
 
   web-server:
     build:
-      context: ./server
-      dockerfile: ./server/Dockerfile
+      context: server
+      dockerfile: server/Dockerfile
     container_name: web-server_app
     ports:
       - "3000:3000"
@@ -12,8 +12,9 @@ services:
       
   web-client:
     build:
-      context: ./client
-      dockerfile: ./client/Dockerfile
+      context: client
+      dockerfile: client/Dockerfile
+    container_name: web-server_app
     ports:
       - "8080:80"
     restart: always
