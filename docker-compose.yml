@@ -14,7 +14,7 @@ services:
     build:
       context: client
       dockerfile: client/Dockerfile
-    container_name: web-server_app
+    container_name: web-client_app
     ports:
       - "8080:80"
     restart: always
