@@ -3,17 +3,17 @@ services:
 
   web-server:
     build:
-      context: server
-      dockerfile: server/Dockerfile
+      context: ./server    # Mengarah ke folder 'server'
+      dockerfile: ./server/Dockerfile    # Dockerfile untuk server
     container_name: web-server_app
     ports:
       - "3000:3000"
     restart: always
-      
+  
   web-client:
     build:
-      context: client
-      dockerfile: client/Dockerfile
+      context: ./client    # Mengarah ke folder 'client' untuk frontend
+      dockerfile: ./client/Dockerfile    # Dockerfile untuk client
     container_name: web-client_app
     ports:
       - "8080:80"
